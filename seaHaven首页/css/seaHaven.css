@@ -1,0 +1,776 @@
+@charset "utf-8";
+body{
+    overflow-x: hidden;
+}
+.container{
+    font-family: sans-serif;
+    width: 100%;
+}
+/*logo*/
+.logo{
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 200px);
+    padding: 20px 50px;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 999;
+}
+.logo img{
+    width: 300px;
+}
+.logo:hover{
+    opacity: 1;
+}
+/*视频*/
+#video{
+    width: 100%;
+    vertical-align: bottom;
+}
+/*头部导航*/
+header{
+    font: 500 16px/20px 'Roboto', arial;
+    color: #888;
+    transform: translateX(0%);
+    transition: all 0.8s;
+    background-color: white;
+    z-index: 999;
+    min-width: 1519.2px;
+}
+.active{
+    position: absolute;
+}
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.nav-wrap{
+    margin:0 65px;
+}
+.nav{
+    width: calc(100% + 345px);
+}
+.nav>li{
+    display: inline-block;
+    position: relative;
+    padding: 55px 20px;
+    vertical-align: top;
+}
+#none{
+    display: none;
+}
+.book{
+    display: inline-block;
+    padding: 55px 20px;
+    vertical-align: top;
+    background-color: #2e91b3;
+    color: white;
+}
+.nav .nav-li:hover{
+    background-color: #f5f4f0;
+}
+
+.book:hover{
+    opacity: 0.7;
+}
+.nav .phone{
+    font-size: 32px;
+    color: #2e91b3;
+    padding-left: 20px;
+}
+.nav-btn{
+    position: absolute;
+    left: 100%;
+    display: inline-block;
+    width: 345px;
+}
+.nav-logo{
+    display: inline-block;
+    padding: 35px 25px;
+    width: 210px;
+    vertical-align: top;
+    background-color: white;
+}
+.nav-logo img{
+    width: 210px;
+    background-color: white;
+}
+.nav-logo:hover img{
+    opacity: 0.7;
+}
+#pull{
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 130px;
+    background-color: #2e91b3;
+    text-align: center;
+    cursor: pointer;
+}
+#pull ul{
+    position: absolute;
+    width: 35px;
+    height: 21px;
+    padding: 7px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+}
+#pull ul li{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 6px;
+    transition: all 0.1s;
+}
+#pull ul li:last-child{
+    margin: 0;
+}
+#pull div{
+    color: rgba(255,255,255,0.6);
+    padding-top: 97px;
+}
+#pull:hover ul li:first-child{
+    transform: rotate(90deg);
+}
+#pull:hover ul li:last-child{
+    transform: rotate(-90deg);
+}
+/*二级导航*/
+.down-nav{
+    position: absolute;
+    top: 0px;
+    left: calc(50% - 112.5px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+}
+.down-nav li{
+    background-color: #50b3d5;
+    width: 225px;
+    text-align: center;
+    line-height: 41.6px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.down-nav li:hover{
+    background-color: #f5f4f0;
+    color: #50b3d5;
+}
+.nav .nav-li:hover .down-nav{
+    opacity: 1;
+    visibility: visible;
+}
+/*欢迎界面*/
+.welcome{
+    margin-top: 130px;
+    min-width: 1366.9px;
+}
+.welcome-wrap{
+    width: 1366.9px;
+    margin: 0 auto;
+}
+.welcome-box{
+    box-sizing: border-box;
+    background-color: #594e48;
+    width: 546.9px;
+    height: 546.9px;
+    text-align: center;
+    color: white;
+    padding: 130px 30px;
+}
+.welcome-box .box-title{
+    transition: all 0.5s;
+    opacity: 0;
+}
+.welcome-box .box-title h2{
+    font: 100 60px/60px 'Roboto', arial;
+    line-height: 60px;
+}
+.welcome-box .box-title p{
+    font: 300 18px/28px 'Roboto', arial;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.welcome-box .box-form input[type=text]{
+    font: 300 17px/17px 'Roboto', arial;
+    width: 150px;
+    color: white;
+    outline: none;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    padding: 27px;
+    background:#4d453e url("../images/datepicker.svg") center right 12% no-repeat;
+    transition: all 0.3s;
+}
+.welcome-box .box-form input[type=text]:hover{
+    background-color: #484039;
+}
+.welcome-box .box-form input[type=submit]{
+    margin-top: 10px;
+    font: 100 29px/29px 'Roboto', arial;
+    color: #888;
+    outline: none;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    padding: 27px;
+    background-color: white;
+    transition: all 0.3s;
+}
+.welcome-box .box-form input[type=submit]:hover{
+    background-color: #484039;
+    color: white;
+}
+/*欢迎界面-轮播图*/
+.welcome-banner{
+    position: relative;
+    width: 820px;
+    overflow: hidden;
+}
+.welcome-banner ul{
+    width: 2460px;
+    transition: all 0.3s;
+}
+.welcome-banner ul li{
+    position: relative;
+    width: 820px;
+    height: 546.9px;
+    cursor: pointer;
+}
+.welcome-banner .banner-1{
+    background: url("../images/bed.jpg") no-repeat center;
+    background-size: 820px 546.9px;
+}
+.welcome-banner .banner-2{
+    background: url("../images/restaurant.jpg") no-repeat center;
+    background-size: 820px 546.9px;
+}
+.welcome-banner .banner-3{
+    background: url("../images/seahaven-graphic-urban-list-no-1.jpg") no-repeat center;
+    background-size: 820px 546.9px;
+}
+.mask{
+    background-color: #50b3d5;
+    opacity: 0.55;
+    height: 100%;
+}
+.welcome-banner li:hover .mask{
+    opacity: .75;
+}
+.welcome-banner li:hover .banner-title{
+    right: 15%;
+    top: 15%
+}
+.welcome-banner .banner-3:hover{
+    opacity: .75;
+}
+.welcome-banner .banner-title{
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transition: all 0.3s;
+}
+.welcome-banner .banner-title p{
+    font:300 28px/38px 'Roboto', arial;
+    color: white;
+    text-align: right;
+}
+.welcome-banner .banner-title p:nth-child(2){
+    font: 100 120px/140px 'Roboto', arial;
+}
+.welcome-banner .banner-title span{
+    font:300 28px/38px 'Roboto', arial;
+}
+#welBan-l{
+    position: absolute;
+    left: -5%;
+    top: 50%;
+    z-index: 997;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#welBan-r{
+    position: absolute;
+    right: -5%;
+    top: 50%;
+    z-index: 997;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.welcome-banner:hover #welBan-l{
+    left: 5%;
+}
+.welcome-banner:hover #welBan-r{
+    right: 5%;
+}
+.welBan-icon{
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    z-index: 998;
+}
+.welBan-icon div{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin: 0 2px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+.welBan-icon .wel-active{
+    opacity: 1;
+}
+/*公寓界面*/
+.apartments{
+    background: url("../images/apartments-bg.jpg") center top no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 15% 0 5% 0;
+    margin-top: -10%;
+    min-width: 1215px;
+}
+.apart-banner{
+    position: relative;
+    width: 1215px;
+    height: 692.55px;
+}
+.apart-banner ul{
+    position: relative;
+}
+.apart-banner li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1215px;
+    height: 692.55px;
+    transition: all 0.3s;
+}
+.apart-banner li:nth-child(1){
+    background: url("../images/3.jpg") no-repeat center;
+    background-size: cover;
+    opacity: 1;
+}
+.apart-banner li:nth-child(2){
+    background: url("../images/4.jpg") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+}
+.apart-banner li:nth-child(3){
+    background: url("../images/5.jpg") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+}
+.apart-banner li:nth-child(4){
+    background: url("../images/6.jpg") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+}
+.apart-banner li:nth-child(5){
+    background: url("../images/slideshow-apartments-01.jpg") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+}
+.apart-banner li:nth-child(6){
+    background: url("../images/slideshow-apartments-02.jpg") no-repeat center;
+    background-size: cover;
+    opacity: 0;
+}
+.apart-mask{
+    background-color: #f5f5f5;
+    opacity: 0;
+    height: 100%;
+    transition: all 0.3s;
+}
+.apart-icon{
+    position: absolute;
+    right: 140px;
+    bottom: 83px;
+    z-index: 998;
+}
+#apartBan-l{
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+#apartBan-r{
+    display: inline-block;
+    cursor: pointer;
+}
+.apart-line{
+    font: 100 29px/29px 'Roboto', arial;
+    color: #888;
+    outline: none;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    padding: 27px;
+    background-color: white;
+    transition: all 0.3s;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: .75;
+    cursor: pointer;
+    z-index: 998;
+}
+.apart-line:hover{
+    opacity: 1;
+    color: white;
+}
+.apart-line:hover+.apart-mask{
+    opacity: .55;
+}
+.apart-line:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #615b55;
+    z-index: -1;
+    transition: all 0.5s ease;
+}
+.apart-line:hover:before{
+    width: 100%;
+}
+.apart-line{
+    opacity: 0;
+    visibility: hidden;
+}
+.apart-banner li:nth-child(1) .apart-line{
+    opacity: 1;
+    visibility: visible;
+}
+main{
+    min-width: 1366.9px;
+    padding:  7% 0 5% 0;;
+}
+.main-wrap{
+    width: 1366.9px;
+    margin: 0 auto;
+}
+.main-wrap h1{
+    font: 100 66px/76px 'Roboto', arial;
+    transition: all 400ms 200ms ease-in-out;
+    color: #2e91b3;
+    opacity: 0;
+}
+.main-wrap p{
+    font: 100 28px/38px 'Roboto', arial;
+    transition: all 400ms 400ms ease-in-out;
+    color: #888;
+    margin: 2% 0;
+    opacity: 0;
+}
+.main-wrap p:last-child{
+    font: 300 18px/28px 'Roboto', arial;
+}
+/*宣传图*/
+.statement{
+    min-width: 1519px;
+    position: relative;
+}
+.statement img{
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+.moveBox{
+    position: absolute;
+    width: 27%;
+    background: rgba(255,255,255,0.9);
+    left: 6%;
+    top: 0;
+    font: 100 58px/62px 'Roboto', arial;
+    color: #2e91b3;
+    padding: 6% 3%;
+    text-align: center;
+}
+/*注册*/
+.sub{
+    min-width: 1366.9px;
+    background: url("../images/boxes-bg.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 15% 0 8% 0;
+}
+.sub-wrap{
+    width: 1366.9px;
+    margin: 0 auto;
+}
+.sub-box{
+    box-sizing: border-box;
+    background-color: #594e48;
+    width: 546.9px;
+    height: 546.9px;
+    text-align: center;
+    color: white;
+    padding: 130px 30px;
+}
+.sub-box .box-title{
+    transition: all 0.5s;
+    opacity: 0;
+}
+.sub-box .box-title h2{
+    font: 100 60px/60px 'Roboto', arial;
+    line-height: 60px;
+}
+.sub-box .box-title p{
+    font: 300 18px/28px 'Roboto', arial;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sub-box .box-form input[type=text]{
+    font: 300 17px/17px 'Roboto', arial;
+    width: 150px;
+    color: white;
+    outline: none;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    padding: 27px;
+    background:#4d453e url("../images/datepicker.svg") center right 12% no-repeat;
+    transition: all 0.3s;
+}
+.sub-box .box-form input[type=text]:hover{
+    background-color: #484039;
+}
+.sub-box .box-form input[type=submit]{
+    margin-top: 10px;
+    font: 100 29px/29px 'Roboto', arial;
+    color: #888;
+    outline: none;
+    border: none;
+    resize: none;
+    cursor: pointer;
+    padding: 27px;
+    background-color: white;
+    transition: all 0.3s;
+}
+.sub-box .box-form input[type=submit]:hover{
+    background-color: #484039;
+    color: white;
+}
+.sub-box .box-form p{
+    margin-top: 10px;
+    font: 300 18px/28px 'Roboto', arial;
+    color: white;
+}
+.sub-box .box-form p span{
+    font: 300 18px/28px 'Roboto', arial;
+    color: #2e91b3;
+    cursor: pointer;
+}
+/*注册-轮播图*/
+.sub-banner{
+    position: relative;
+    width: 820px;
+    overflow: hidden;
+}
+.sub-banner ul{
+    width: 820px;
+    transition: all 0.3s;
+    height: 546.9px;
+}
+.sub-banner ul li{
+    position: absolute;
+    width: 820px;
+    height: 546.9px;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+.sub-banner .banner-1{
+    background: url("../images/10.jpg") no-repeat center;
+    background-size: 820px 546.9px;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.3s;
+}
+.sub-banner .banner-2{
+    background: url("../images/triathlon.jpg") no-repeat center;
+    background-size: 820px 546.9px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.sub-banner .banner-3{
+    background: url("../images/7.jpg") no-repeat center;
+    background-size: 820px 546.9px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+.mask{
+    background-color: #50b3d5;
+    opacity: 0.55;
+    height: 100%;
+}
+.sub-banner li:hover .mask{
+    opacity: .75;
+}
+.sub-banner li:hover .banner-title{
+    right: 15%;
+    top: 15%
+}
+.sub-banner .banner-title{
+    width: 440px;
+    position: absolute;
+    right: 10%;
+    top: 10%;
+    transition: all 0.3s;
+}
+.sub-banner .banner-title p{
+    font:300 28px/38px 'Roboto', arial;
+    color: white;
+    text-align: right;
+}
+.sub-banner .banner-title p:nth-child(2){
+    font: 100 120px/140px 'Roboto', arial;
+}
+.sub-banner .banner-title span{
+    font:300 28px/38px 'Roboto', arial;
+}
+.sub-banner .sub-icon{
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    z-index: 998;
+}
+.sub-icon div{
+    display: inline-block;
+    font: 300 22px/22px 'Roboto', arial;
+    color: white;
+    background-color: #2e91b3;
+    padding: 5px 8px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+.sub-icon div:hover{
+    background-color: #50b3d5;
+    color: white;
+}
+.sub-icon .sub-active{
+    background-color: white;
+    color: #888;
+}
+/*底部*/
+footer{
+    text-align: center;
+    min-width: 1366.9px;
+}
+.footer-1{
+    padding: 50px 0;
+}
+.footer-1 li{
+    display: inline-block;
+    color: #888;
+    margin: 0 1.4%;
+    transition: all 0.3s;
+}
+.footer-1 li a{
+    font: 300 18px/20px 'Roboto', arial;
+}
+.footer-1 li:hover{
+    color: #50b3d5;
+}
+.footer-1 li:last-child a{
+    background-color: #2e91b3;
+    padding: 10px 15px;
+    color: white;
+}
+.footer-1 li:last-child:hover{
+    opacity: .75;
+}
+.footer-2{
+    padding: 50px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.footer-2 li{
+    display: inline-block;
+    color: #888;
+    margin: 0 1.4%;
+    transition: all 0.3s;
+    vertical-align: middle;
+}
+.footer-2 span{
+    display: inline-block;
+    width: 5%;
+}
+.footer-2 li a{
+    font: 300 18px/20px 'Roboto', arial;
+}
+.footer-2 li:hover{
+    color: #50b3d5;
+}
+.footer-2 .social a{
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+}
+.footer-2 .social:hover{
+    opacity: .75;
+}
+.social:nth-child(5) a{
+    background: url("../images/pinterest.svg") no-repeat center;
+}
+.social:nth-child(6) a{
+    background: url("../images/facebook.svg") no-repeat center;
+}
+.social:nth-child(7) a{
+    background: url("../images/twitter.svg") no-repeat center;
+}
+.social:nth-child(8) a{
+    background: url("../images/google.svg") no-repeat center;
+}
+.footer-2 .phone{
+    text-align: right;
+    font: 100 28px/28px 'Roboto', arial;
+}
+.footer-2 .phone .tel{
+    font: 100 32px/32px 'Roboto', arial;
+    color: #2e91b3;
+}
+.footer-3{
+    font: 100 16px/28px 'Roboto', arial;
+    color: #a3a3a2;
+    padding: 10px 0;
+}
+.footer-4 img{
+    width: 450px;
+}
+.footer-5{
+    font: 100 16px/28px 'Roboto', arial;
+    color: #a3a3a2;
+    padding: 30px 0;
+}
+.footer-5 span{
+    display: inline-block;
+    width: 2%;
+}
+.footer-5 a{
+    font: 100 16px/28px 'Roboto', arial;
+    transition: all 0.3s;
+}
+.footer-5 a img{
+    vertical-align: bottom;
+}
+.footer-5 a:hover{
+    color: #50b3d5;
+}
+.footer-5 a:last-child:hover{
+    opacity: .75;
+}

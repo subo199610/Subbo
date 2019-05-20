@@ -1,0 +1,138 @@
+@charset "utf-8";
+*{
+    font-family: "POP HandelGotD-Cxibei";
+}
+.wrap{
+    position: relative;
+    width: 320px;
+    height: 568px;
+    margin: 50px auto;
+    background: url("../images/bg1.png") center;
+    overflow: hidden;
+}
+#start-btn{
+    position: absolute;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    left: 0;right: 0;top: 0;bottom: 0;
+    margin: auto;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px black;
+}
+#start-btn:hover{
+    background-color: #888;
+    color: white;
+}
+#blood{
+    display: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    line-height: 30px;
+    font-size: 20px;
+    padding-left: 10px;
+    z-index: 999;
+    font-weight: bold;
+    color: #888;
+}
+#blood-line{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    background-color: #888;
+    height: 10px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+#blood-line #liner{
+    display: inline-block;
+    width: 100%;
+    background-color: white;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .5s;
+}
+#score{
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 35%;
+    font-size: 20px;
+    z-index: 999;
+    color: white;
+    font-weight: bold;
+}
+#score-val{
+    display: inline-block;
+}
+.enemyHited{
+    animation: enemyHited .2s linear infinite;
+}
+@keyframes enemyHited {
+    0%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(2%);
+    }
+    40%{
+        transform: translateX(-2%);
+    }
+    60%{
+        transform: translateX(5%);
+    }
+    80%{
+        transform: translateX(-5%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.planehited{
+    animation: planeHited .2s linear infinite;
+}
+@keyframes planeHited {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+#gameover{
+    display: none;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 0;right: 0;top: 0;bottom: 0;
+    margin: auto;
+    text-align: center;
+    z-index: 997;
+}
+#gameover h1{
+    font-size: 40px;
+    line-height: 46px;
+}
+#reStart-btn{
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px black;
+}
+#reStart-btn:hover{
+    background-color: #888;
+    color: white;
+}

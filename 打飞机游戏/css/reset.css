@@ -1,0 +1,39 @@
+@charset "utf-8";
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd{
+	margin:0;
+	padding:0;
+}
+ul,ol{
+	list-style:none;/*清除LIST前面的序号点*/
+}
+i,em,b,strong{
+	font-style:normal;/*还原字体本来的样式*/
+}
+body{
+	font:14px/24px "Microsoft yahei";
+}
+a{
+	text-decoration:none;
+	color:inherit;/*继承父级属性*/
+}
+img{ /*清除img下面的距离*/
+	border:0;/*解决低版本的IE下会默认出现边框的情况*/
+}
+*{
+	font-family: "Montserrat Medium";
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clearFix:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+.flex{
+	display: flex;
+	justify-content: space-between;
+}
